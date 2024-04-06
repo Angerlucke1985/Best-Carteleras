@@ -1,0 +1,34 @@
+a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+    overflow: hidden;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 300px;
+    width: 50%;
+    height: 0.1em;
+    background-color: rgb(255, 46, 46);
+    opacity: 0;
+    transition: opacity 300ms, transform 400ms;
+    transform: translate3d(-5%, 0, 0);
+}
+
+a:hover::after,
+a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+
+a:hover::after,
+a:focus::after{
+    transform: translate3d(0, 0, 0);
+}
+
+
